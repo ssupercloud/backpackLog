@@ -1,0 +1,17 @@
+@(registrants: List[Registrant], user: Registrant)
+
+@import helper._
+
+@main("Browse Members", user) {
+
+    <h1>@registrants.size() registrant(s)</h1>
+    
+    <ul>
+        @for(registrant <- registrants) {
+            <li>
+                <a href="@routes.Application.displayProfile(registrant.email)">@registrant.firstName 
+                @registrant.lastName</a> <span class="smallFont">@registrant.email</span>
+            </li>
+        }
+    </ul>
+}

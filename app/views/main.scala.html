@@ -1,0 +1,38 @@
+@(title: String, registrant:Registrant)(content: Html)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Backpacklog</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+    </head>
+    	<header>
+        <div id="greenBar">
+            <div id="header">
+                <div id="logo" class="lfoat">
+                    <a href="@routes.Application.welcome"><span id="title"><span>Backpack</span>Log</span></a>
+                </div>
+                @if(registrant == null) {
+                }else{
+				<dl class="rfloat" id="user">
+				    <dt><a href="@routes.Application.displayProfile(registrant.email)">@registrant.firstName</a> 
+				    @if(registrant.email == "danielalksnis@gmail.com") { @*Need to make an admin table to allow for more than one admin*@
+					 <a href="@routes.Application.admin()"><span class="smallFont">[Admin Panel] </span></a>
+					} 
+					</dt>
+				    <dd>
+				        <a href="@routes.Application.logout()"> Logout</a>
+				    </dd>
+				</dl>
+            	}
+            </div>
+        </div>
+    	</header>
+    <body>
+       <div id="container">
+       		@views.html.nav()
+	    	@content
+	    </div>
+    </body>
+</html>

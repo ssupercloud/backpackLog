@@ -1,0 +1,24 @@
+@(form: Form[Application.Login], user: Registrant)
+
+@main("Browse Members", user) {
+    <div id="login">
+        @helper.form(routes.Application.authenticate) {
+        Sign in
+        @if(form.hasGlobalErrors) {
+            <p class="error">
+            @form.globalError.message
+            </p>
+        }
+        @if(flash.contains("success")) {
+            <p class="success">
+                @flash.get("success")
+            </p>
+        }
+
+            <input type="email" name="email" placeholder="Email" value="@form("email").value">
+
+            <input type="password" name="password" placeholder="Password">
+
+            <button type="submit">Login</button>                    }
+    </div>
+}

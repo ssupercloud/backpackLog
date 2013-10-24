@@ -1,0 +1,26 @@
+@(registrants: List[Registrant], user: Registrant)
+
+@import helper._
+
+@main("Admin Panel", user) {
+
+    <h1>@registrants.size() registrant(s)</h1>
+    
+    <table>
+        @for(registrant <- registrants) {
+            <tr>
+                <td><a href="@routes.Application.displayProfile(registrant.email)">@registrant.firstName 
+                @registrant.lastName</a></td>
+                <td>@registrant.email</td>
+                <td>@registrant.password</td>
+
+                <td>@form(routes.Application.deleteRegistrant(registrant.email)) {
+                    <input type="submit" value="Delete">
+                }</td>
+                <td>@form(routes.Application.editRegistrant(registrant.email)) {
+                    <input type="submit" value="Modify">
+                }</td>
+            </tr>
+        }
+    </table>
+}

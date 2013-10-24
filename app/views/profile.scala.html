@@ -1,0 +1,11 @@
+@(profile: Registrant, user: Registrant)
+
+@main("Profile", user) {
+	<div id="timelinePhoto">
+		<div class="bottom"><span>@profile.firstName @profile.lastName</span>
+			@if(profile.email == user.email) {
+			 <a href="@routes.Application.editRegistrant(user.email)">Edit Profile</a>
+			}
+		</div>
+	</div>
+	}

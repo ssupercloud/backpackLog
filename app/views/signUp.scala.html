@@ -1,0 +1,23 @@
+@(RegistrationForm: Form[Registrant])
+
+<div class="rfloat" id="registrationForm">
+    <h2>Sign Up</h2>
+    <p>It's free and always will be!</p>
+
+    @helper.form(routes.Application.newRegistrant()) {
+
+        <p><input class="regFormHome" type="text" name="firstName" placeholder="First Name">
+        <input class="regFormHome" type="text" name="lastName" placeholder="Last Name"><p>
+        <p><input class="regFormHome regFormHome2" type="email" name="email" placeholder="Your E-mail"><p>
+        <p><input class="regFormHome regFormHome2" type="password" name="password" placeholder="Password"></p>
+        
+        
+        @helper.inputRadioGroup(RegistrationForm("gender"),
+            options = Seq("M"->"Male","F"->"Female"),
+            '_label -> "Gender",
+            '_error -> RegistrationForm("gender").error.map(_.withMessage("select gender"))
+        )
+
+        <input class="submitBig" type="submit" value="Sign Up">   
+    }
+</div>

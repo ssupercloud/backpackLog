@@ -1,0 +1,61 @@
+@(form: Form[Application.Login], RegistrationForm: Form[Registrant])
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Backpacklog</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+    </head>
+    <body>
+
+	<header>
+        <div id="greenBar">
+            <div id="header">
+                <div id="logo" class="lfoat">
+                    <a href="@routes.Application.welcome"><span id="title"><span>Backpack</span>Log</span></a>
+                </div>
+
+                
+                <div id="login" class="rfloat">
+                    <div class="lfloat">
+                        @if(form.hasGlobalErrors) {
+	                        <p class="error">
+	                        @form.globalError.message
+	                        </p>
+                    	}
+                    	@if(flash.contains("success")) {
+	                        <p class="success">
+	                            @flash.get("success")
+	                        </p>
+                    		}
+                	</div>
+                	<div class="rfloat">
+                    @helper.form(routes.Application.authenticate) {
+
+                        <input class="homeLogin" type="email" name="email" placeholder="Email" value="@form("email").value">
+
+                        <input class="homeLogin" type="password" name="password" placeholder="Password">
+
+                        <button type="submit">Sign In</button>     
+                    	}
+                    <div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="container">
+    	<div id="home">
+    	<p>Connect with travelers and the world around you on BackpackLog.<p>
+    	<ul>
+    	<li><span>Discover the latest calls for adventures</span> at the the Terminus</li>
+    	<li><span>Exhibit your adventures and discoveries</span> in your Cabinet of Trophees</li>
+    	<li><span>Share your expertise</span> on your Wall of Certificates</li>
+    	</div>
+    	@views.html.signUp(RegistrationForm)
+    </div>
+</body>
+</html>
+
