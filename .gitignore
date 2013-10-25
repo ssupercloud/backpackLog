@@ -1,4 +1,13 @@
-logs
+bin/
+data/
+db/
+dist/
+logs/
+test-result/
+lib/
+log/
+tmp/
+modules/
 project/project
 project/target
 target
@@ -13,3 +22,4 @@ dist
 /.project
 /RUNNING_PID
 /.settings
+
