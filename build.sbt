@@ -6,6 +6,7 @@ libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
   cache
+  "postgresql" % "postgresql" % "8.4-702.jdbc4"
 )     
 
 play.Project.playJavaSettings
