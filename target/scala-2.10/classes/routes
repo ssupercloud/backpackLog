@@ -1,0 +1,32 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+#Index
+GET		/							controllers.Application.welcome()
+POST 	/							controllers.Application.newRegistrant()
+GET     /		                 	controllers.Application.login()
+
+#Login
+GET     /login                  	controllers.Application.login()
+POST    /login                      controllers.Application.authenticate()
+
+#Logout
+GET     /logout                     controllers.Application.logout()
+
+#Browse Members
+GET		/browse						controllers.Application.browse()
+POST 	/browse/:id/delete			controllers.Application.deleteRegistrant(id: String)
+
+#Browse Members
+GET		/admin						controllers.Application.admin()
+POST 	/admin/:id/delete			controllers.Application.deleteRegistrant(id: String)
+
+GET		/terminus					controllers.Application.terminus()
+
+#Profile
+GET 	/:username					controllers.Application.displayProfile(username: String)
+GET 	/:username/edit				controllers.Application.editRegistrant(username: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

@@ -1,0 +1,6 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/danielalksnis/Sites/backpackLog/conf/application.conf,/Users/danielalksnis/Sites/backpackLog/target/scala-2.10/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/danielalksnis/Sites/backpackLog/conf/evolutions,/Users/danielalksnis/Sites/backpackLog/target/scala-2.10/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/Users/danielalksnis/Sites/backpackLog/conf/routes,/Users/danielalksnis/Sites/backpackLog/target/scala-2.10/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Users/danielalksnis/Sites/backpackLog/conf/evolutions/default,/Users/danielalksnis/Sites/backpackLog/target/scala-2.10/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/Users/danielalksnis/Sites/backpackLog/conf/evolutions/default/1.sql,/Users/danielalksnis/Sites/backpackLog/target/scala-2.10/classes/evolutions/default/1.sql)[0m
