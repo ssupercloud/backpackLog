@@ -42,7 +42,7 @@ Seq[Any](format.raw/*1.1*/("""<nav>
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Oct 25 14:11:02 EDT 2013
+                    DATE: Mon Oct 28 16:11:12 EDT 2013
                     SOURCE: /Users/danielalksnis/Sites/backpackLog/app/views/nav.scala.html
                     HASH: 45c36d73546c8b20df43f629d90aa95e00c7226a
                     MATRIX: 853->0

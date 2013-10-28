@@ -48,7 +48,7 @@ Seq[Any](format.raw/*1.41*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Oct 25 14:11:02 EDT 2013
+                    DATE: Mon Oct 28 16:11:12 EDT 2013
                     SOURCE: /Users/danielalksnis/Sites/backpackLog/app/views/profile.scala.html
                     HASH: 15d4b6c7dfc788a2424252691dbbac687f32f5b8
                     MATRIX: 791->1|924->40|961->43|990->64|1029->66|1120->122|1135->129|1166->139|1203->141|1218->148|1248->157|1294->169|1333->200|1372->202|1422->217|1436->223|1496->262|1549->285

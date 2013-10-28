@@ -1,6 +1,6 @@
 // @SOURCE:/Users/danielalksnis/Sites/backpackLog/conf/routes
 // @HASH:eb08e75776ab5a3d2949b9174a5a6fb9778708e8
-// @DATE:Mon Oct 28 15:23:51 EDT 2013
+// @DATE:Mon Oct 28 16:11:10 EDT 2013
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._

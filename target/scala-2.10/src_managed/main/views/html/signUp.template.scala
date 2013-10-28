@@ -60,7 +60,7 @@ Seq[Any](format.raw/*1.38*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Oct 25 14:11:02 EDT 2013
+                    DATE: Mon Oct 28 16:11:12 EDT 2013
                     SOURCE: /Users/danielalksnis/Sites/backpackLog/app/views/signUp.scala.html
                     HASH: b6006be16bea2bb1d028d8adfc1f12f13b506d7f
                     MATRIX: 785->1|915->37|1062->150|1076->156|1125->197|1164->199|1631->630|1646->636|1901->869|2006->943
