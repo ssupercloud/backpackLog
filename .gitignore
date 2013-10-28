@@ -1,21 +1,9 @@
-# general
-*~
-*.log
-tmp
-dump
- 
-# Eclipse
-.settings
-.cache
-.project
-.classpath
-.scala_dependencies
-
-# SBT
-dist
-project/boot
-project/plugins/target
- 
-# Play
-logs
-RUNNING_PID
+bin/
+data/
+db/
+dist/
+logs/
+test-result/
+lib/
+tmp/
+modules/
