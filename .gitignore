@@ -15,9 +15,7 @@ bin
 # SBT
 dist
 project/boot
-project/target
 project/plugins/target
-target
 .target
  
 # Play
