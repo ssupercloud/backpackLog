@@ -10,13 +10,11 @@ dump
 .project
 .classpath
 .scala_dependencies
-bin
- 
+
 # SBT
 dist
 project/boot
 project/plugins/target
-.target
  
 # Play
 logs
