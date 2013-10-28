@@ -8,7 +8,7 @@ POST 	/							controllers.Application.newRegistrant()
 GET     /		                 	controllers.Application.login()
 
 #Login
-GET     /login                  	controllers.Application.login()
+#GET     /login                  	controllers.Application.login()
 POST    /login                      controllers.Application.authenticate()
 
 #Logout
@@ -20,7 +20,7 @@ POST 	/browse/:id/delete			controllers.Application.deleteRegistrant(id: String)
 
 #Browse Members
 GET		/admin						controllers.Application.admin()
-POST 	/admin/:id/delete			controllers.Application.deleteRegistrant(id: String)
+#POST 	/admin/:id/delete			controllers.Application.deleteRegistrant(id: String)
 
 GET		/terminus					controllers.Application.terminus()
 

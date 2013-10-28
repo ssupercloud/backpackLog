@@ -1,6 +1,6 @@
 // @SOURCE:/Users/danielalksnis/Sites/backpackLog/conf/routes
-// @HASH:3e623145411c0ae0070d03204db4f75af7f2ab7a
-// @DATE:Fri Oct 25 14:11:00 EDT 2013
+// @HASH:eb08e75776ab5a3d2949b9174a5a6fb9778708e8
+// @DATE:Mon Oct 28 15:23:51 EDT 2013
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -17,13 +17,11 @@ import Router.queryString
 // @LINE:29
 // @LINE:28
 // @LINE:25
-// @LINE:23
 // @LINE:22
 // @LINE:19
 // @LINE:18
 // @LINE:15
 // @LINE:12
-// @LINE:11
 // @LINE:8
 // @LINE:7
 // @LINE:6
@@ -45,13 +43,11 @@ def at(file:String): Call = {
 // @LINE:29
 // @LINE:28
 // @LINE:25
-// @LINE:23
 // @LINE:22
 // @LINE:19
 // @LINE:18
 // @LINE:15
 // @LINE:12
-// @LINE:11
 // @LINE:8
 // @LINE:7
 // @LINE:6
@@ -100,17 +96,9 @@ def welcome(): Call = {
 }
                                                 
 
-// @LINE:23
 // @LINE:19
 def deleteRegistrant(id:String): Call = {
-   (id: @unchecked) match {
-// @LINE:19
-case (id) if true => Call("POST", _prefix + { _defaultPrefix } + "browse/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)) + "/delete")
-                                                        
-// @LINE:23
-case (id) if true => Call("POST", _prefix + { _defaultPrefix } + "admin/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)) + "/delete")
-                                                        
-   }
+   Call("POST", _prefix + { _defaultPrefix } + "browse/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)) + "/delete")
 }
                                                 
 
@@ -126,17 +114,9 @@ def newRegistrant(): Call = {
 }
                                                 
 
-// @LINE:11
 // @LINE:8
 def login(): Call = {
-   () match {
-// @LINE:8
-case () if true => Call("GET", _prefix)
-                                                        
-// @LINE:11
-case () if true => Call("GET", _prefix + { _defaultPrefix } + "login")
-                                                        
-   }
+   Call("GET", _prefix)
 }
                                                 
     
@@ -150,13 +130,11 @@ case () if true => Call("GET", _prefix + { _defaultPrefix } + "login")
 // @LINE:29
 // @LINE:28
 // @LINE:25
-// @LINE:23
 // @LINE:22
 // @LINE:19
 // @LINE:18
 // @LINE:15
 // @LINE:12
-// @LINE:11
 // @LINE:8
 // @LINE:7
 // @LINE:6
@@ -183,13 +161,11 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:29
 // @LINE:28
 // @LINE:25
-// @LINE:23
 // @LINE:22
 // @LINE:19
 // @LINE:18
 // @LINE:15
 // @LINE:12
-// @LINE:11
 // @LINE:8
 // @LINE:7
 // @LINE:6
@@ -273,18 +249,12 @@ def welcome : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:23
 // @LINE:19
 def deleteRegistrant : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.deleteRegistrant",
    """
       function(id) {
-      if (true) {
       return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "browse/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id)) + "/delete"})
-      }
-      if (true) {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "admin/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id)) + "/delete"})
-      }
       }
    """
 )
@@ -312,18 +282,12 @@ def newRegistrant : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:11
 // @LINE:8
 def login : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.login",
    """
       function() {
-      if (true) {
       return _wA({method:"GET", url:"""" + _prefix + """"})
-      }
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
-      }
       }
    """
 )
@@ -339,13 +303,11 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:29
 // @LINE:28
 // @LINE:25
-// @LINE:23
 // @LINE:22
 // @LINE:19
 // @LINE:18
 // @LINE:15
 // @LINE:12
-// @LINE:11
 // @LINE:8
 // @LINE:7
 // @LINE:6
@@ -368,13 +330,11 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 // @LINE:29
 // @LINE:28
 // @LINE:25
-// @LINE:23
 // @LINE:22
 // @LINE:19
 // @LINE:18
 // @LINE:15
 // @LINE:12
-// @LINE:11
 // @LINE:8
 // @LINE:7
 // @LINE:6
@@ -431,7 +391,8 @@ def deleteRegistrant(id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.H
 
 // @LINE:12
 def authenticate(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.authenticate(), HandlerDef(this, "controllers.Application", "authenticate", Seq(), "POST", """""", _prefix + """login""")
+   controllers.Application.authenticate(), HandlerDef(this, "controllers.Application", "authenticate", Seq(), "POST", """Login
+GET     /login                  	controllers.Application.login()""", _prefix + """login""")
 )
                       
 

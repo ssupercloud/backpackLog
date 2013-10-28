@@ -1,6 +1,6 @@
 // @SOURCE:/Users/danielalksnis/Sites/backpackLog/conf/routes
-// @HASH:3e623145411c0ae0070d03204db4f75af7f2ab7a
-// @DATE:Fri Oct 25 14:11:00 EDT 2013
+// @HASH:eb08e75776ab5a3d2949b9174a5a6fb9778708e8
+// @DATE:Mon Oct 28 15:23:51 EDT 2013
 
 
 import play.core._
@@ -40,50 +40,42 @@ private[this] lazy val controllers_Application_newRegistrant1 = Route("POST", Pa
 private[this] lazy val controllers_Application_login2 = Route("GET", PathPattern(List(StaticPart(Routes.prefix))))
         
 
-// @LINE:11
-private[this] lazy val controllers_Application_login3 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
-        
-
 // @LINE:12
-private[this] lazy val controllers_Application_authenticate4 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
+private[this] lazy val controllers_Application_authenticate3 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
         
 
 // @LINE:15
-private[this] lazy val controllers_Application_logout5 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("logout"))))
+private[this] lazy val controllers_Application_logout4 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("logout"))))
         
 
 // @LINE:18
-private[this] lazy val controllers_Application_browse6 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("browse"))))
+private[this] lazy val controllers_Application_browse5 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("browse"))))
         
 
 // @LINE:19
-private[this] lazy val controllers_Application_deleteRegistrant7 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("browse/"),DynamicPart("id", """[^/]+""",true),StaticPart("/delete"))))
+private[this] lazy val controllers_Application_deleteRegistrant6 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("browse/"),DynamicPart("id", """[^/]+""",true),StaticPart("/delete"))))
         
 
 // @LINE:22
-private[this] lazy val controllers_Application_admin8 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("admin"))))
-        
-
-// @LINE:23
-private[this] lazy val controllers_Application_deleteRegistrant9 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("admin/"),DynamicPart("id", """[^/]+""",true),StaticPart("/delete"))))
+private[this] lazy val controllers_Application_admin7 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("admin"))))
         
 
 // @LINE:25
-private[this] lazy val controllers_Application_terminus10 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("terminus"))))
+private[this] lazy val controllers_Application_terminus8 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("terminus"))))
         
 
 // @LINE:28
-private[this] lazy val controllers_Application_displayProfile11 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),DynamicPart("username", """[^/]+""",true))))
+private[this] lazy val controllers_Application_displayProfile9 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),DynamicPart("username", """[^/]+""",true))))
         
 
 // @LINE:29
-private[this] lazy val controllers_Application_editRegistrant12 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),DynamicPart("username", """[^/]+""",true),StaticPart("/edit"))))
+private[this] lazy val controllers_Application_editRegistrant10 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),DynamicPart("username", """[^/]+""",true),StaticPart("/edit"))))
         
 
 // @LINE:32
-private[this] lazy val controllers_Assets_at13 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Assets_at11 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.welcome()"""),("""POST""", prefix,"""controllers.Application.newRegistrant()"""),("""GET""", prefix,"""controllers.Application.login()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Application.login()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Application.authenticate()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.Application.logout()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """browse""","""controllers.Application.browse()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """browse/$id<[^/]+>/delete""","""controllers.Application.deleteRegistrant(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """admin""","""controllers.Application.admin()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """admin/$id<[^/]+>/delete""","""controllers.Application.deleteRegistrant(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """terminus""","""controllers.Application.terminus()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """$username<[^/]+>""","""controllers.Application.displayProfile(username:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """$username<[^/]+>/edit""","""controllers.Application.editRegistrant(username:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.welcome()"""),("""POST""", prefix,"""controllers.Application.newRegistrant()"""),("""GET""", prefix,"""controllers.Application.login()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Application.authenticate()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.Application.logout()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """browse""","""controllers.Application.browse()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """browse/$id<[^/]+>/delete""","""controllers.Application.deleteRegistrant(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """admin""","""controllers.Application.admin()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """terminus""","""controllers.Application.terminus()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """$username<[^/]+>""","""controllers.Application.displayProfile(username:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """$username<[^/]+>/edit""","""controllers.Application.editRegistrant(username:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -115,24 +107,17 @@ case controllers_Application_login2(params) => {
 }
         
 
-// @LINE:11
-case controllers_Application_login3(params) => {
-   call { 
-        invokeHandler(controllers.Application.login(), HandlerDef(this, "controllers.Application", "login", Nil,"GET", """Login""", Routes.prefix + """login"""))
-   }
-}
-        
-
 // @LINE:12
-case controllers_Application_authenticate4(params) => {
+case controllers_Application_authenticate3(params) => {
    call { 
-        invokeHandler(controllers.Application.authenticate(), HandlerDef(this, "controllers.Application", "authenticate", Nil,"POST", """""", Routes.prefix + """login"""))
+        invokeHandler(controllers.Application.authenticate(), HandlerDef(this, "controllers.Application", "authenticate", Nil,"POST", """Login
+GET     /login                  	controllers.Application.login()""", Routes.prefix + """login"""))
    }
 }
         
 
 // @LINE:15
-case controllers_Application_logout5(params) => {
+case controllers_Application_logout4(params) => {
    call { 
         invokeHandler(controllers.Application.logout(), HandlerDef(this, "controllers.Application", "logout", Nil,"GET", """Logout""", Routes.prefix + """logout"""))
    }
@@ -140,7 +125,7 @@ case controllers_Application_logout5(params) => {
         
 
 // @LINE:18
-case controllers_Application_browse6(params) => {
+case controllers_Application_browse5(params) => {
    call { 
         invokeHandler(controllers.Application.browse(), HandlerDef(this, "controllers.Application", "browse", Nil,"GET", """Browse Members""", Routes.prefix + """browse"""))
    }
@@ -148,7 +133,7 @@ case controllers_Application_browse6(params) => {
         
 
 // @LINE:19
-case controllers_Application_deleteRegistrant7(params) => {
+case controllers_Application_deleteRegistrant6(params) => {
    call(params.fromPath[String]("id", None)) { (id) =>
         invokeHandler(controllers.Application.deleteRegistrant(id), HandlerDef(this, "controllers.Application", "deleteRegistrant", Seq(classOf[String]),"POST", """""", Routes.prefix + """browse/$id<[^/]+>/delete"""))
    }
@@ -156,23 +141,15 @@ case controllers_Application_deleteRegistrant7(params) => {
         
 
 // @LINE:22
-case controllers_Application_admin8(params) => {
+case controllers_Application_admin7(params) => {
    call { 
         invokeHandler(controllers.Application.admin(), HandlerDef(this, "controllers.Application", "admin", Nil,"GET", """Browse Members""", Routes.prefix + """admin"""))
    }
 }
         
 
-// @LINE:23
-case controllers_Application_deleteRegistrant9(params) => {
-   call(params.fromPath[String]("id", None)) { (id) =>
-        invokeHandler(controllers.Application.deleteRegistrant(id), HandlerDef(this, "controllers.Application", "deleteRegistrant", Seq(classOf[String]),"POST", """""", Routes.prefix + """admin/$id<[^/]+>/delete"""))
-   }
-}
-        
-
 // @LINE:25
-case controllers_Application_terminus10(params) => {
+case controllers_Application_terminus8(params) => {
    call { 
         invokeHandler(controllers.Application.terminus(), HandlerDef(this, "controllers.Application", "terminus", Nil,"GET", """""", Routes.prefix + """terminus"""))
    }
@@ -180,7 +157,7 @@ case controllers_Application_terminus10(params) => {
         
 
 // @LINE:28
-case controllers_Application_displayProfile11(params) => {
+case controllers_Application_displayProfile9(params) => {
    call(params.fromPath[String]("username", None)) { (username) =>
         invokeHandler(controllers.Application.displayProfile(username), HandlerDef(this, "controllers.Application", "displayProfile", Seq(classOf[String]),"GET", """Profile""", Routes.prefix + """$username<[^/]+>"""))
    }
@@ -188,7 +165,7 @@ case controllers_Application_displayProfile11(params) => {
         
 
 // @LINE:29
-case controllers_Application_editRegistrant12(params) => {
+case controllers_Application_editRegistrant10(params) => {
    call(params.fromPath[String]("username", None)) { (username) =>
         invokeHandler(controllers.Application.editRegistrant(username), HandlerDef(this, "controllers.Application", "editRegistrant", Seq(classOf[String]),"GET", """""", Routes.prefix + """$username<[^/]+>/edit"""))
    }
@@ -196,7 +173,7 @@ case controllers_Application_editRegistrant12(params) => {
         
 
 // @LINE:32
-case controllers_Assets_at13(params) => {
+case controllers_Assets_at11(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
    }

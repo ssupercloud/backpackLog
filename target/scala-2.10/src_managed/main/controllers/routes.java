@@ -1,6 +1,6 @@
 // @SOURCE:/Users/danielalksnis/Sites/backpackLog/conf/routes
-// @HASH:3e623145411c0ae0070d03204db4f75af7f2ab7a
-// @DATE:Fri Oct 25 14:11:00 EDT 2013
+// @HASH:eb08e75776ab5a3d2949b9174a5a6fb9778708e8
+// @DATE:Mon Oct 28 15:23:51 EDT 2013
 
 package controllers;
 
